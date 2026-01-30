@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Introduction to Computational Chemistry | CH22013: Introduction to Computational Chemistry</title>
+  <meta name="description" content="Introduction lecture notes for CH22013, providing an overview of computational chemistry methods covered in the course." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Introduction to Computational Chemistry | CH22013: Introduction to Computational Chemistry" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Introduction lecture notes for CH22013, providing an overview of computational chemistry methods covered in the course." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Introduction to Computational Chemistry | CH22013: Introduction to Computational Chemistry" />
+  
+  <meta name="twitter:description" content="Introduction lecture notes for CH22013, providing an overview of computational chemistry methods covered in the course." />
+  
+
+<meta name="author" content="Benjamin J. Morgan" />
+
+
+<meta name="date" content="2026-01-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CH22013: Introduction to Computational Chemistry</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction to Computational Chemistry</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#what-do-we-want-to-know"><i class="fa fa-check"></i><b>1.1</b> What Do We Want to Know?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#questions-about-structure-and-energetics"><i class="fa fa-check"></i><b>1.1.1</b> Questions About Structure and Energetics</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introduction.html"><a href="introduction.html#questions-about-dynamics"><i class="fa fa-check"></i><b>1.1.2</b> Questions About Dynamics</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introduction.html"><a href="introduction.html#questions-about-ensemble-properties"><i class="fa fa-check"></i><b>1.1.3</b> Questions About Ensemble Properties</a></li>
+<li class="chapter" data-level="1.1.4" data-path="introduction.html"><a href="introduction.html#questions-about-electronic-character"><i class="fa fa-check"></i><b>1.1.4</b> Questions About Electronic Character</a></li>
+<li class="chapter" data-level="1.1.5" data-path="introduction.html"><a href="introduction.html#two-classes-of-questions"><i class="fa fa-check"></i><b>1.1.5</b> Two Classes of Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#two-domains-of-computational-chemistry"><i class="fa fa-check"></i><b>1.2</b> Two Domains of Computational Chemistry</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#the-potential-energy-surface"><i class="fa fa-check"></i><b>1.2.1</b> The Potential Energy Surface</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#domain-1-working-with-the-pes"><i class="fa fa-check"></i><b>1.2.2</b> Domain 1: Working with the PES</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#domain-2-first-principles-calculation-of-chemical-properties"><i class="fa fa-check"></i><b>1.2.3</b> Domain 2: First-Principles Calculation of Chemical Properties</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#how-this-course-fits-together"><i class="fa fa-check"></i><b>1.3</b> How This Course Fits Together</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#mmmd-and-mc-working-with-the-pes"><i class="fa fa-check"></i><b>1.3.1</b> MM/MD and MC: Working with the PES</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#drug-discovery-computational-chemistry-in-action"><i class="fa fa-check"></i><b>1.3.2</b> Drug Discovery: Computational Chemistry in Action</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#electronic-structure-first-principles-methods"><i class="fa fa-check"></i><b>1.3.3</b> Electronic Structure: First-Principles Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CH22013: Introduction to Computational Chemistry</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Introduction to Computational Chemistry<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="what-do-we-want-to-know" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> What Do We Want to Know?<a href="introduction.html#what-do-we-want-to-know" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Chemistry is about understanding and predicting how matter behaves. What structure will a molecule adopt? Will a reaction proceed? What colour will a compound absorb? How tightly will a drug bind to its target?
+These are hard questions. Molecules are quantum mechanical systems, and exact solutions to the equations governing their behaviour exist only for the simplest cases. Experiments can answer many questions, but they are often slow, expensive, or impractical — we cannot easily measure the structure of a transition state or track individual atoms as they move.
+Computational chemistry offers another route. By combining physical theory with numerical methods, we can calculate molecular properties, simulate how systems evolve, and predict behaviour before ever entering the laboratory. Different questions require different methods, and a central skill in computational chemistry is matching the question you want to answer to an appropriate computational approach.</p>
+<div id="questions-about-structure-and-energetics" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Questions About Structure and Energetics<a href="introduction.html#questions-about-structure-and-energetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Many fundamental questions in chemistry reduce to questions about energy. Which arrangement of atoms is most stable? Will this reaction proceed spontaneously? How difficult is it to cross a reaction barrier?
+The most stable structure corresponds to an energy minimum. Whether a reaction is thermodynamically favourable depends on the energy difference between reactants and products. The difficulty of a reaction—how fast it proceeds—relates to the energy barrier that must be overcome to convert reactants to products.
+To answer such questions computationally, we use methods that can calculate or estimate molecular energies as a function of atomic positions.</p>
+</div>
+<div id="questions-about-dynamics" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Questions About Dynamics<a href="introduction.html#questions-about-dynamics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Other questions are inherently about motion and change. How does a protein flex? How does a lithium-ion move through a battery material? How do molecules move through membranes or filters? For these, we generate trajectories that track how atomic positions evolve over time. Trajectories reveal mechanisms and timescales — from femtosecond bond vibrations to the slow diffusion of atoms through solids. Where questions about structure ask what state is stable, dynamics asks how systems move and change.</p>
+</div>
+<div id="questions-about-ensemble-properties" class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Questions About Ensemble Properties<a href="introduction.html#questions-about-ensemble-properties" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Thermodynamic quantities like pressure, free energy, and entropy describe bulk systems, not individual molecules in single configurations. Even questions about a single molecule, like “what conformations does it populate?”, require considering the distribution of structures the molecule explores, not just the global energy minimum. Answering these questions requires sampling many configurations and computing averages.</p>
+</div>
+<div id="questions-about-electronic-character" class="section level3 hasAnchor" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Questions About Electronic Character<a href="introduction.html#questions-about-electronic-character" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Some questions cannot be answered by knowing molecular energies alone. What wavelength of light will a molecule absorb? Is a transition metal complex paramagnetic or diamagnetic? Where on a molecule is an electrophilic attack most likely to occur?
+These questions concern the electronic structure of molecules—the arrangement and behaviour of electrons within the molecular framework. A molecule’s colour depends on the energy gaps between electronic states. Magnetic properties depend on the presence and coupling of unpaired electron spins. The regioselectivity of a reaction—which site on a molecule reacts—depends on the distribution of electron density in the frontier orbitals.
+Answering these questions requires methods that explicitly describe electrons and their quantum mechanical behaviour, not just the total energy of a given nuclear configuration.</p>
+</div>
+<div id="two-classes-of-questions" class="section level3 hasAnchor" number="1.1.5">
+<h3><span class="header-section-number">1.1.5</span> Two Classes of Questions<a href="introduction.html#two-classes-of-questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Within these four groups of questions, there is a natural division. Questions about structure, dynamics, and ensemble properties all depend on knowing how molecular energy varies with atomic positions—the potential energy surface. Questions about electronic character require information about the electrons themselves.</p>
+</div>
+</div>
+<div id="two-domains-of-computational-chemistry" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Two Domains of Computational Chemistry<a href="introduction.html#two-domains-of-computational-chemistry" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-potential-energy-surface" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> The Potential Energy Surface<a href="introduction.html#the-potential-energy-surface" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For questions about structure, dynamics, and ensemble properties, a central concept is the potential energy surface (or PES). The PES describes how the energy of a molecular system varies as a function of atomic positions. For a diatomic molecule, this is simply a curve showing energy versus bond length. For larger molecules, the PES becomes a high-dimensional surface—impossible to visualise directly, but conceptually similar.</p>
+<p>The topology of the PES encodes much of chemistry. Energy minima correspond to stable molecular structures—reactants, products, and stable intermediates. First-order saddle points, which are minima in all directions except one, correspond to transition states—the highest-energy points along minimum-energy reaction pathways. The depth of a minimum indicates relative thermodynamic stability; the height of a barrier is related to how fast or slow a transformation is.</p>
+</div>
+<div id="domain-1-working-with-the-pes" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Domain 1: Working with the PES<a href="introduction.html#domain-1-working-with-the-pes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The first domain of computational chemistry comprises methods for working with the PES—approximating it efficiently and extracting chemical information from it.</p>
+<p><strong>Where does the PES come from?</strong> The PES can be obtained in several ways. The most rigorous approach calculates energies directly from quantum mechanics—solving (approximately) the electronic Schrödinger equation for each nuclear configuration. This provides accurate energies but is computationally expensive, limiting such calculations to relatively small systems or few configurations.</p>
+<p>A more economical approach approximates the PES using classical force fields, also called molecular mechanics. Force fields represent the energy as a sum of simple analytical functions. The parameters in these functions are fitted to reproduce experimental data or quantum mechanical calculations. Force fields sacrifice accuracy for speed, enabling calculations on large biomolecules, polymers, or condensed phases that would be inaccessible with quantum methods.</p>
+<p>An emerging approach uses machine-learned interatomic potentials (MLIPs), which are trained on quantum mechanical data to model the PES with near-quantum accuracy at a fraction of the cost. This is an exciting, rapidly developing field, but it sits outside the scope of this course.</p>
+<p><strong>Dynamics on the PES.</strong> Given a PES (whether from quantum calculations, force fields, or machine learning models), molecular dynamics (MD) simulations allow us to simulate how atoms and molecules move over time. Starting from initial positions and velocities, MD integrates Newton’s equations of motion to generate a trajectory—a sequence of configurations showing how the system moves across the energy landscape. From such trajectories, we can study molecular vibrations, diffusion, and conformational changes. Because a trajectory provides a sequence of different configurations, we can also average over MD trajectories to obtain estimates of thermodynamic properties.</p>
+<p><strong>Sampling the PES.</strong> Another way to obtain thermodynamic averages is to sample configurations directly using random numbers. In Markov chain Monte Carlo (MCMC), we generate configurations according to their Boltzmann probabilities, without following physical trajectories. Using random numbers for sampling can also be used to model dynamic processes. Kinetic Monte Carlo (kMC) generates stochastic trajectories by sampling events rather than configurations, selecting which transition occurs and when based on rate constants. This is useful for modelling dynamics in cases where MD is impractical, such as processes occurring over very long timescales.</p>
+</div>
+<div id="domain-2-first-principles-calculation-of-chemical-properties" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Domain 2: First-Principles Calculation of Chemical Properties<a href="introduction.html#domain-2-first-principles-calculation-of-chemical-properties" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The second domain comprises methods that calculate chemical properties directly from quantum mechanics—the electronic structure methods. These methods serve two distinct purposes.</p>
+<p><strong>Accurate energies.</strong> The energy calculated at each nuclear configuration defines a quantum mechanical PES, and these calculations underpin the other approaches we have discussed—force field parameters are fitted to quantum mechanical data, and machine-learned potentials are trained on databases of quantum mechanical energies.</p>
+<p><strong>Electronic properties.</strong> Electronic structure methods also provide access to properties that depend on how electrons are arranged or how they respond to external effects like light or magnetic fields. The questions from the previous section—about colour, magnetism, and reactivity—all require information contained in the electronic wave function or electron density, not just the total energy.</p>
+</div>
+</div>
+<div id="how-this-course-fits-together" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> How This Course Fits Together<a href="introduction.html#how-this-course-fits-together" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The methods introduced above form the content of this course. The four main sections—Molecular Mechanics and Molecular Dynamics, Monte Carlo Methods, Drug Discovery, and Electronic Structure Theory—correspond to different aspects of the two domains above. Understanding how these sections relate helps make sense of the course as a whole.</p>
+<div id="mmmd-and-mc-working-with-the-pes" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> MM/MD and MC: Working with the PES<a href="introduction.html#mmmd-and-mc-working-with-the-pes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The first two sections focus on Domain 1: given a potential energy surface, how do we extract chemical information from it?</p>
+<p>The MM/MD section introduces force fields as computationally tractable approximations to the PES, suitable for large systems and long timescales. With a force field in hand, molecular dynamics simulations reveal how systems evolve—how molecules vibrate, how proteins flex, how solutes diffuse through solvents. As we noted earlier, MD trajectories also provide a route to thermodynamic averages by sampling configurations over time.</p>
+<p>The Monte Carlo section introduces an alternative approach to sampling. Metropolis Monte Carlo generates configurations according to their Boltzmann weights without following trajectories, enabling direct calculation of thermodynamic averages. Kinetic Monte Carlo uses random sampling to model rare events, connecting microscopic rate constants to observable kinetics.</p>
+</div>
+<div id="drug-discovery-computational-chemistry-in-action" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Drug Discovery: Computational Chemistry in Action<a href="introduction.html#drug-discovery-computational-chemistry-in-action" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The drug discovery section focuses on how computational methods combine to address a specific real-world problem. Drug design represents one of the most significant practical applications of computational chemistry, where the methods from the first part of the course find direct use.</p>
+<p>Predicting whether a small molecule will bind to a protein target involves many of the concepts we have introduced. Docking algorithms search for low-energy binding poses—essentially seeking minima on the PES of the protein-ligand complex. Scoring functions approximate binding energies using various physical and empirical terms. Free energy perturbation (FEP) calculations use sampling methods to compute binding free energies with higher accuracy. Molecular dynamics simulations reveal the flexibility of binding sites and the stability of predicted poses.</p>
+<p>This section brings together ideas from MM/MD and MC in an applied context, showing how different methods address different aspects of the drug discovery problem. It also introduces data-driven approaches that predict activity from molecular structure without explicitly modelling the physics.</p>
+</div>
+<div id="electronic-structure-first-principles-methods" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Electronic Structure: First-Principles Methods<a href="introduction.html#electronic-structure-first-principles-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The final and largest section covers Domain 2: calculating chemical properties from first principles using electronic structure theory.</p>
+<p>This section serves two distinct purposes. First, it provides accurate energies that characterise the PES. Force fields and machine learning models are parameterised against quantum mechanical calculations, and the accuracy of any energy-based calculation ultimately traces back to electronic structure theory. Second, it addresses the questions about electronic character raised earlier—spectra, magnetism, reactivity—which require explicit treatment of electrons, not just energies.</p>
+<p>This dual role explains why electronic structure comprises the largest section of the course—it provides us with our most accurate description of the PES, and it allows us to answer questions that relate to electronic properties of molecules and other chemical systems.</p>
+</div>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Summary<a href="introduction.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Computational chemistry provides methods for understanding and predicting molecular behaviour. The questions we ask fall into broad classes: those concerning the potential energy surface (structure, dynamics, ensemble properties), and those requiring explicit treatment of electrons (accurate energies and electronic properties such as spectra and magnetism).</p>
+<p>These classes map onto two domains of computational methods. Domain 1 focuses on working with the PES—constructing it and extracting information through dynamics or statistical sampling. Domain 2 focuses on calculating chemical properties from first principles—obtaining accurate energies from quantum mechanics and computing electronic properties that depend on the wave function, not just the total energy.</p>
+<p>This course covers both domains, structured so that each section builds on what came before. Force fields are intuitive (atoms connected by springs, charges interacting), and molecular dynamics uses Newton’s laws, familiar from physics. Monte Carlo uses random numbers rather than equations of motion, but still works with the same energy landscapes. Drug discovery applies and combines the methods from the first two sections, showing how they work together on real problems. Electronic structure theory uses quantum mechanics to access properties that depend on electrons — spectra, magnetism, reactivity — and to calculate the PES itself, closing the loop back to where the course began.</p>
+<p>Throughout the course, a central skill is learning to match questions to methods—understanding what each approach provides and selecting the right tool for each problem.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "depth": 3
+  },
+  "mathjax": {
+    "extensions": "mhchem.js"
+  },
+  "mathjax_config": {
+    "TeX": {
+      "Macros": {
+        "conc": [
+          "[\mathrm{#1}]",
+          1
+        ],
+        "diffc": [
+          "\frac{\mathrm{d}\conc{#1}}{\mathrm{d}t}",
+          1
+        ]
+      }
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
