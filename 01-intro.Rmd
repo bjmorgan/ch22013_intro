@@ -105,5 +105,4 @@ These classes map onto two domains of computational methods. Domain 1 focuses on
 
 This course covers both domains, structured so that each section builds on what came before. Force fields are intuitive (atoms connected by springs, charges interacting), and molecular dynamics uses Newton's laws, familiar from physics. Monte Carlo uses random numbers rather than equations of motion, but still works with the same energy landscapes. Drug discovery applies and combines the methods from the first two sections, showing how they work together on real problems. Electronic structure theory uses quantum mechanics to access properties that depend on electrons — spectra, magnetism, reactivity — and to calculate the PES itself, closing the loop back to where the course began.
 
-Throughout the course, a central skill is learning to match questions to methods—understanding what each approach provides and selecting the right tool for each problem.
-
+Throughout the course, a central skill is learning to match questions to methods. No single approach answers every question, and knowing what each method can and cannot do is essential for applying computational chemistry effectively.
