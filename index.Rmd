@@ -1,0 +1,15 @@
+---
+title: "CH22013: Introduction to Computational Chemistry"
+author: "Benjamin J. Morgan"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+description: |
+  Introduction lecture notes for CH22013, providing an overview of computational chemistry methods covered in the course.
+link-citations: yes
+---
+
+# About {-}
+
+These notes accompany the introductory lecture for the 2025-26 CH22013 course on Computational Chemistry.

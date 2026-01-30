@@ -1,0 +1,34 @@
+# Bookdown output
+_book/
+_bookdown_files/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor files
+*.swp
+.nova/
+.vscode/
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# Temporary files
+*~

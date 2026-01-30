@@ -1,0 +1,14 @@
+delete_merged_file: true
+book_filename: "ch22013-intro"
+language:
+  ui:
+    chapter_name: ""
+
+rmd_files: [
+  "index.Rmd",
+  "01-intro.Rmd"
+]
+
+output:
+  bookdown::html_book:
+    dev: "png"
