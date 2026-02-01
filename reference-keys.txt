@@ -11,6 +11,6 @@ domain-1-working-with-the-pes
 domain-2-first-principles-calculation-of-chemical-properties
 how-this-course-fits-together
 mmmd-and-mc-working-with-the-pes
-drug-discovery-computational-chemistry-in-action
 electronic-structure-first-principles-methods
+drug-discovery-computational-chemistry-in-action
 summary

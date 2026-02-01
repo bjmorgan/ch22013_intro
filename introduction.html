@@ -23,7 +23,7 @@
 <meta name="author" content="Benjamin J. Morgan" />
 
 
-<meta name="date" content="2026-01-30" />
+<meta name="date" content="2026-02-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -96,8 +96,8 @@
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#how-this-course-fits-together"><i class="fa fa-check"></i><b>1.3</b> How This Course Fits Together</a>
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#mmmd-and-mc-working-with-the-pes"><i class="fa fa-check"></i><b>1.3.1</b> MM/MD and MC: Working with the PES</a></li>
-<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#drug-discovery-computational-chemistry-in-action"><i class="fa fa-check"></i><b>1.3.2</b> Drug Discovery: Computational Chemistry in Action</a></li>
-<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#electronic-structure-first-principles-methods"><i class="fa fa-check"></i><b>1.3.3</b> Electronic Structure: First-Principles Methods</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#electronic-structure-first-principles-methods"><i class="fa fa-check"></i><b>1.3.2</b> Electronic Structure: First-Principles Methods</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#drug-discovery-computational-chemistry-in-action"><i class="fa fa-check"></i><b>1.3.3</b> Drug Discovery: Computational Chemistry in Action</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
 </ul></li>
@@ -175,32 +175,31 @@ Answering these questions requires methods that explicitly describe electrons an
 </div>
 <div id="how-this-course-fits-together" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> How This Course Fits Together<a href="introduction.html#how-this-course-fits-together" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The methods introduced above form the content of this course. The four main sections—Molecular Mechanics and Molecular Dynamics, Monte Carlo Methods, Drug Discovery, and Electronic Structure Theory—correspond to different aspects of the two domains above. Understanding how these sections relate helps make sense of the course as a whole.</p>
+<p>The methods introduced above form the content of this course. The four main sections—Molecular Mechanics and Molecular Dynamics, Monte Carlo Methods, Electronic Structure Theory, and Drug Discovery—correspond to different aspects of the two domains above. Understanding how these sections relate helps make sense of the course as a whole.</p>
 <div id="mmmd-and-mc-working-with-the-pes" class="section level3 hasAnchor" number="1.3.1">
 <h3><span class="header-section-number">1.3.1</span> MM/MD and MC: Working with the PES<a href="introduction.html#mmmd-and-mc-working-with-the-pes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The first two sections focus on Domain 1: given a potential energy surface, how do we extract chemical information from it?</p>
 <p>The MM/MD section introduces force fields as computationally tractable approximations to the PES, suitable for large systems and long timescales. With a force field in hand, molecular dynamics simulations reveal how systems evolve—how molecules vibrate, how proteins flex, how solutes diffuse through solvents. As we noted earlier, MD trajectories also provide a route to thermodynamic averages by sampling configurations over time.</p>
 <p>The Monte Carlo section introduces an alternative approach to sampling. Metropolis Monte Carlo generates configurations according to their Boltzmann weights without following trajectories, enabling direct calculation of thermodynamic averages. Kinetic Monte Carlo uses random sampling to model rare events, connecting microscopic rate constants to observable kinetics.</p>
 </div>
-<div id="drug-discovery-computational-chemistry-in-action" class="section level3 hasAnchor" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Drug Discovery: Computational Chemistry in Action<a href="introduction.html#drug-discovery-computational-chemistry-in-action" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The drug discovery section focuses on how computational methods combine to address a specific real-world problem. Drug design represents one of the most significant practical applications of computational chemistry, where the methods from the first part of the course find direct use.</p>
-<p>Predicting whether a small molecule will bind to a protein target involves many of the concepts we have introduced. Docking algorithms search for low-energy binding poses—essentially seeking minima on the PES of the protein-ligand complex. Scoring functions approximate binding energies using various physical and empirical terms. Free energy perturbation (FEP) calculations use sampling methods to compute binding free energies with higher accuracy. Molecular dynamics simulations reveal the flexibility of binding sites and the stability of predicted poses.</p>
-<p>This section brings together ideas from MM/MD and MC in an applied context, showing how different methods address different aspects of the drug discovery problem. It also introduces data-driven approaches that predict activity from molecular structure without explicitly modelling the physics.</p>
+<div id="electronic-structure-first-principles-methods" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Electronic Structure: First-Principles Methods<a href="introduction.html#electronic-structure-first-principles-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The third section covers Domain 2: calculating chemical properties from first principles using electronic structure theory.</p>
+<p>This section serves two purposes. First, it explains how we can calculate accurate energies that characterise the PES. Force fields and machine learning models are parameterised against quantum mechanical calculations, and the accuracy of any energy-based calculation ultimately traces back to electronic structure theory. Second, it addresses the questions about electronic character raised earlier—spectra, magnetism, reactivity—which require explicit treatment of electrons, not just energies.</p>
 </div>
-<div id="electronic-structure-first-principles-methods" class="section level3 hasAnchor" number="1.3.3">
-<h3><span class="header-section-number">1.3.3</span> Electronic Structure: First-Principles Methods<a href="introduction.html#electronic-structure-first-principles-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The final and largest section covers Domain 2: calculating chemical properties from first principles using electronic structure theory.</p>
-<p>This section serves two distinct purposes. First, it provides accurate energies that characterise the PES. Force fields and machine learning models are parameterised against quantum mechanical calculations, and the accuracy of any energy-based calculation ultimately traces back to electronic structure theory. Second, it addresses the questions about electronic character raised earlier—spectra, magnetism, reactivity—which require explicit treatment of electrons, not just energies.</p>
-<p>This dual role explains why electronic structure comprises the largest section of the course—it provides us with our most accurate description of the PES, and it allows us to answer questions that relate to electronic properties of molecules and other chemical systems.</p>
+<div id="drug-discovery-computational-chemistry-in-action" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Drug Discovery: Computational Chemistry in Action<a href="introduction.html#drug-discovery-computational-chemistry-in-action" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The final section illustrates how computational chemistry methods can be used and combined to address problems in a specific application domain.</p>
+<p>Predicting whether a small molecule will bind to a protein target draws on both domains of computational chemistry. Docking algorithms search for low-energy binding poses on the PES of the protein-ligand complex. Molecular dynamics simulations reveal binding site flexibility. Free energy calculations use statistical sampling to predict binding affinities. Where key interactions require more accurate treatment than classical force fields provide, we can use hybrid methods: these combine quantum mechanical methods for modelling the binding site with classical force fields for the surrounding protein.</p>
+<p>This section also introduces data-driven approaches—quantitative structure-activity relationships (QSAR) and pharmacophore models—that predict activity from molecular structure without explicitly modelling the physics.</p>
 </div>
 </div>
 <div id="summary" class="section level2 hasAnchor" number="1.4">
 <h2><span class="header-section-number">1.4</span> Summary<a href="introduction.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Computational chemistry provides methods for understanding and predicting molecular behaviour. The questions we ask fall into broad classes: those concerning the potential energy surface (structure, dynamics, ensemble properties), and those requiring explicit treatment of electrons (accurate energies and electronic properties such as spectra and magnetism).</p>
 <p>These classes map onto two domains of computational methods. Domain 1 focuses on working with the PES—constructing it and extracting information through dynamics or statistical sampling. Domain 2 focuses on calculating chemical properties from first principles—obtaining accurate energies from quantum mechanics and computing electronic properties that depend on the wave function, not just the total energy.</p>
-<p>This course covers both domains, structured so that each section builds on what came before. Force fields are intuitive (atoms connected by springs, charges interacting), and molecular dynamics uses Newton’s laws, familiar from physics. Monte Carlo uses random numbers rather than equations of motion, but still works with the same energy landscapes. Drug discovery applies and combines the methods from the first two sections, showing how they work together on real problems. Electronic structure theory uses quantum mechanics to access properties that depend on electrons — spectra, magnetism, reactivity — and to calculate the PES itself, closing the loop back to where the course began.</p>
-<p>Throughout the course, a central skill is learning to match questions to methods. No single approach answers every question, and knowing what each method can and cannot do is essential for applying computational chemistry effectively.</p>
+<p>This course covers both domains. Force fields are intuitive (atoms connected by springs, charges interacting), and molecular dynamics uses Newton’s laws, familiar from physics. Monte Carlo uses random numbers rather than equations of motion, but works with the same energy landscapes. Electronic structure theory uses quantum mechanics to calculate the PES itself and to access properties that depend on electrons—spectra, magnetism, reactivity. Drug discovery draws on all of these approaches, illustrating how they combine to address real chemical problems.</p>
+<p>Throughout the course, a central skill is learning to match questions to methods—and recognising when different methods need to be combined. No single approach answers every question, and knowing what each method can and cannot do is essential for applying computational chemistry effectively.</p>
 
 </div>
 </div>
