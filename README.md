@@ -4,7 +4,7 @@ Lecture notes for the introductory lecture of CH22013 (Computational Chemistry) 
 
 ## View Online
 
-The compiled book is available at: https://bjmorgan.github.io/ch22013-intro/
+The compiled book is available at: https://bjmorgan.github.io/ch22013_intro/
 
 ## Building Locally
 
@@ -35,3 +35,4 @@ The output will be in the `_book/` directory.
 ## License
 
 This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
